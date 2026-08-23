@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tonight’s holds — Yacht Service Ltd</title>
+  <title>Tonight’s board — Yacht Service Ltd</title>
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body class="ops">
@@ -11,39 +11,13 @@
     <div class="brand">
       <span class="mark">YS</span>
       <div>
-        <strong>Yacht Service Ltd</strong>
-        <p>Owner · tonight’s holds</p>
+        <strong>Yard board</strong>
+        <p>Todd · after 4</p>
       </div>
     </div>
-    <a class="owner-link" href="../">Customer hold</a>
+    <a class="ghost" href="../">New hold</a>
   </header>
-  <main class="ops-wrap">
-    <form id="pin-form" class="sheet pin-sheet">
-      <h2>Open the board</h2>
-      <p class="sub">PIN for this demo is 2267.</p>
-      <label>PIN
-        <input name="pin" inputmode="numeric" autocomplete="off" maxlength="8" required />
-      </label>
-      <button class="primary" type="submit">Open tonight’s list</button>
-    </form>
-    <section id="board" hidden>
-      <div class="ops-head">
-        <div>
-          <p class="kicker">Tonight</p>
-          <h1>Holds on Todd’s list</h1>
-        </div>
-        <p id="count" class="pill"></p>
-      </div>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr><th>Boat</th><th>Slip / trailer</th><th>Hold</th><th>In</th><th></th></tr>
-          </thead>
-          <tbody id="rows"></tbody>
-        </table>
-      </div>
-    </section>
-  </main>
+  <main id="ops"></main>
   <script src="../app.js"></script>
 </body>
 </html>
