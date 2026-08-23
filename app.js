@@ -26,7 +26,7 @@ function nowStamp() {
 }
 
 const form = document.getElementById("hold-form");
-<if (form) {
+if (form) {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     const data = new FormData(form);
@@ -44,7 +44,7 @@ const form = document.getElementById("hold-form");
 }
 
 const pinForm = document.getElementById("pin-form");
-<if (pinForm) {
+if (pinForm) {
   pinForm.addEventListener("submit", (e) => {
     e.preventDefault();
     const pin = new FormData(pinForm).get("pin");
