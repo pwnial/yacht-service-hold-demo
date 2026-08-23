@@ -72,7 +72,7 @@ function renderPhone() {
         <button class="fat" id="hold" type="button">Hold my spot</button>
         <button class="fat-sec" id="pass" type="button">Not this year</button>
       </div>
-      <p class="credit">Working yard photo \u00b7 Geograph / Peter Pomey</p>
+      <p class="credit">Working yard photo \u00b7 Geograph / Peter Facey</p>
     </div>
   </article>${cheat}`;
 
