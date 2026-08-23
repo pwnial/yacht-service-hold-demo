@@ -3,44 +3,84 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Yacht Service Ltd — Hold a winter slot</title>
+  <title>Hold a winter slot — Yacht Service Ltd</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="bar">
-    <div>
-      <p class="eyebrow">Amityville, NY · 40+ slips · 3 acres winter storage</p>
-      <h1>Yacht Service Ltd</h1>
+  <header class="top">
+    <div class="brand">
+      <span class="mark">YS</span>
+      <div>
+        <strong>Yacht Service Ltd</strong>
+        <p>Amityville · South Shore · Office closes 4pm</p>
+      </div>
     </div>
-    <a class="quiet" href="owner/">Owner</a>
+    <a class="owner-link" href="owner/">Tonight’s list</a>
   </header>
-
-  <main class="card">
-    <h2>Hold a winterize / storage slot</h2>
-    <p class="lede">Phone goes dead after 4pm. Put your boat on Todd’s list tonight. $200 hold. This is a demo — no card is charged.</p>
-
-    <form id="hold-form">
-      <label>Boat name
-        <input name="boat" required maxlength="80" placeholder="Sea Note" />
-      </label>
-      <label>Slip or trailer note
+  <section class="hero">
+    <p class="kicker">Winterize + storage</p>
+    <h1>Put the boat on Todd’s list tonight.</h1>
+    <p class="sub">40+ slips. 3 acres of winter storage. Phone is dead after 4. This hold keeps your slot until we open.</p>
+  </section>
+  <div id="checkout" class="layout">
+    <form id="hold-form" class="sheet" novalidate>
+      <h2>Boat details</h2>
+      <div class="row2">
+        <label>Boat name *
+          <input name="boat" required maxlength="80" autocomplete="off" placeholder="Sea Note" />
+        </label>
+        <label>Length (ft) *
+          <input name="length" type="number" min="12" max="80" required placeholder="28" />
+        </label>
+      </div>
+      <label>Slip or trailer note *
         <input name="place" required maxlength="80" placeholder="Slip 12 or trailer lot A" />
       </label>
-      <label>Length (ft)
-        <input name="length" type="number" min="10" max="80" required placeholder="28" />
+      <label class="check">
+        <input type="checkbox" name="ack" required />
+        I know this is a $200 hold, applied to winterize. Balance is due at the yard.
       </label>
-      <button type="submit">Hold my spot — $200</button>
+      <button type="submit" class="primary desktop-cta">Hold this slip — $200</button>
+      <p class="fine">Demo only. No card is charged. No SMS.</p>
     </form>
-
-    <div id="success" class="success" hidden>
-      <strong>You’re on Todd’s list.</strong>
-      <p>We’ll call you back at open. No payment was taken.</p>
+    <aside class="summary" aria-label="Hold summary">
+      <p class="sum-kicker">Hold summary</p>
+      <h3>Winterize / storage hold</h3>
+      <dl>
+        <div><dt>Yard</dt><dd>Yacht Service Ltd, Amityville</dd></div>
+        <div><dt>Boat</dt><dd id="sum-boat">—</dd></div>
+        <div><dt>Slip / trailer</dt><dd id="sum-place">—</dd></div>
+        <div><dt>Length</dt><dd id="sum-length">—</dd></div>
+      </dl>
+      <div class="money">
+        <div><span>Due now (hold)</span><strong>$200</strong></div>
+        <div><span>Remaining</span><strong>Due at the yard</strong></div>
+      </div>
+      <p class="wont">$200 hold, applied to winterize. You won’t be charged a card here.</p>
+      <button type="submit" form="hold-form" class="primary">Hold this slip — $200</button>
+    </aside>
+  </div>
+  <section id="thanks" class="thanks" hidden>
+    <div class="sheet thanks-card">
+      <p class="ok">Held</p>
+      <h2>You’re on Todd’s list.</h2>
+      <p class="sub">Hold <span id="hold-id"></span>. We’ll call at open. Nothing was charged.</p>
+      <dl class="confirm">
+        <div><dt>Boat</dt><dd id="t-boat"></dd></div>
+        <div><dt>Slip / trailer</dt><dd id="t-place"></dd></div>
+        <div><dt>Hold</dt><dd>$200 · applied to winterize</dd></div>
+      </dl>
+      <a class="primary" href="owner/">See tonight’s list</a>
     </div>
-  </main>
-
-  <footer>
-    Yacht Service Ltd · Amityville · Demo only
-  </footer>
+  </section>
+  <div class="sticky-bar">
+    <div>
+      <strong>$200 hold</strong>
+      <span>Applied to winterize</span>
+    </div>
+    <button type="submit" form="hold-form" class="primary">Hold this slip</button>
+  </div>
+  <footer>Yacht Service Ltd · Merrick Rd corridor, Amityville · Demo, not a live shop</footer>
   <script src="app.js"></script>
 </body>
 </html>
