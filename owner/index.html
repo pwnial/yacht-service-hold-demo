@@ -6,30 +6,44 @@
   <title>Tonight’s holds — Yacht Service Ltd</title>
   <link rel="stylesheet" href="../styles.css" />
 </head>
-<body>
-  <header class="bar">
-    <div>
-      <p class="eyebrow">Owner</p>
-      <h1>Tonight’s holds</h1>
+<body class="ops">
+  <header class="top">
+    <div class="brand">
+      <span class="mark">YS</span>
+      <div>
+        <strong>Yacht Service Ltd</strong>
+        <p>Owner · tonight’s holds</p>
+      </div>
     </div>
-    <a class="quiet" href="../">Customer page</a>
+    <a class="owner-link" href="../">Customer hold</a>
   </header>
-
-  <main class="card">
-    <form id="pin-form">
+  <main class="ops-wrap">
+    <form id="pin-form" class="sheet pin-sheet">
+      <h2>Open the board</h2>
+      <p class="sub">PIN for this demo is 2267.</p>
       <label>PIN
         <input name="pin" inputmode="numeric" autocomplete="off" maxlength="8" required />
       </label>
-      <button type="submit">Open list</button>
+      <button class="primary" type="submit">Open tonight’s list</button>
     </form>
-
-    <div id="list-wrap" hidden>
-      <p class="lede" id="count"></p>
-      <ol id="holds" class="holds"></ol>
-    </div>
+    <section id="board" hidden>
+      <div class="ops-head">
+        <div>
+          <p class="kicker">Tonight</p>
+          <h1>Holds on Todd’s list</h1>
+        </div>
+        <p id="count" class="pill"></p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Boat</th><th>Slip / trailer</th><th>Hold</th><th>In</th><th></th></tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+    </section>
   </main>
-
-  <footer>PIN is 2267 in this demo. Not a live shop.</footer>
   <script src="../app.js"></script>
 </body>
 </html>

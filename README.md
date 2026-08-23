@@ -1,24 +1,26 @@
 # Yacht Service Ltd — winter hold demo
 
-Clickable demo for Yacht Service Ltd (Amityville). Not a live shop install.
+Same product: $200 winterize/storage hold for Yacht Service Ltd, Amityville. Not a live shop.
 
 ## Open it
 
-Customer page: https://pwnial.github.io/yacht-service-hold-demo/
+https://pwnial.github.io/yacht-service-hold-demo/
 
-Owner list: https://pwnial.github.io/yacht-service-hold-demo/owner/  
-PIN: `2267`
+Owner board: https://pwnial.github.io/yacht-service-hold-demo/owner/
+PIN `2267`
 
-## What changed
+If those 404, Pages is still off: Settings → Pages → Deploy from a branch → **main** / **/(root)**.
 
-Static site: customer hold form ($200 button fakes success: “You’re on Todd’s list”), owner page with tonight’s holds, three seeded fake boats.
+## What changed (rebuild)
 
-Holds live in this browser’s localStorage so a new hold shows up on /owner on the same device.
+Booking layout copied from Mobbin craft (not their colors):
+- Airbnb-style sticky price card + big hold button + “you won’t be charged yet” → “$200 hold, applied to winterize”
+- Fresha-style due now $200 vs remaining due at the yard
+- Eventbrite two-column form + summary, then confirmation “You’re on Todd’s list”
+- Navan hold language (“Hold this slip”), not Submit
 
-## What we did not do
+Working-yard South Shore look. Owner page is an ops table (boat, slip, $200, time, HELD).
 
-- No live card processing or Stripe
-- No Twilio / SMS
-- No Vercel
-- Did not contact the shop
-- Did not wire a real yard system
+## Skipped
+
+No Stripe, Twilio, Vercel, no shop contact.
