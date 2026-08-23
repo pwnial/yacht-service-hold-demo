@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yacht Service Ltd — Hold a winter slot</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="bar">
+    <div>
+      <p class="eyebrow">Amityville, NY · 40+ slips · 3 acres winter storage</p>
+      <h1>Yacht Service Ltd</h1>
+    </div>
+    <a class="quiet" href="owner/">Owner</a>
+  </header>
+
+  <main class="card">
+    <h2>Hold a winterize / storage slot</h2>
+    <p class="lede">Phone goes dead after 4pm. Put your boat on Todd’s list tonight. $200 hold. This is a demo — no card is charged.</p>
+
+    <form id="hold-form">
+      <label>Boat name
+        <input name="boat" required maxlength="80" placeholder="Sea Note" />
+      </label>
+      <label>Slip or trailer note
+        <input name="place" required maxlength="80" placeholder="Slip 12 or trailer lot A" />
+      </label>
+      <label>Length (ft)
+        <input name="length" type="number" min="10" max="80" required placeholder="28" />
+      </label>
+      <button type="submit">Hold my spot — $200</button>
+    </form>
+
+    <div id="success" class="success" hidden>
+      <strong>You’re on Todd’s list.</strong>
+      <p>We’ll call you back at open. No payment was taken.</p>
+    </div>
+  </main>
+
+  <footer>
+    Yacht Service Ltd · Amityville · Demo only
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
