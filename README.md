@@ -1,6 +1,7 @@
-# Yacht Service Ltd — yard hold board
-
-Amityville winterize/storage holds. $200 hold applied to the invoice.
+# Yacht Service Ltd — winter hold (demo)
 
 Customer: https://pwnial.github.io/yacht-service-hold-demo/
-Owner: https://pwnial.github.io/yacht-service-hold-demo/owner/  PIN 2267
+Owner: https://pwnial.github.io/yacht-service-hold-demo/owner/
+
+One-decision phone for a boat the yard already knows. $200 hold is fake. No Stripe, Twilio, or Vercel.
+Owner PIN 2267.
